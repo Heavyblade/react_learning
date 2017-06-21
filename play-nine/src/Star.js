@@ -1,12 +1,14 @@
 import React from "react";
 
 const Star = (props) => {
+  var elements = [];
+
+  for(var i=0; i < props.stars; i++) {
+      elements.push(<i className="fa fa-star" key={i}/>);
+  }
   return(
     <div className="col-md-5">
-      <i className="fa fa-star"/>
-      <i className="fa fa-star"/>
-      <i className="fa fa-star"/>
-      <i className="fa -star"/>
+      {elements}
     </div>
   );
 }

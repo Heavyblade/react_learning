@@ -1,9 +1,10 @@
 import React from "react";
 
 const Answer = (props) => {
-  return(
+  var selected = props.selectedNumbers.map(n => <span onClick={ () => props.unSelectNumber(n) } key={`selected_${n}`}>{n}</span>);
+  return (
     <div className="col-md-4">
-      <p>...Answer</p>
+      {selected}
     </div>
   );
 }

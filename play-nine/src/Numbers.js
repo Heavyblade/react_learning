@@ -1,21 +1,33 @@
 import React from "react";
+import _ from "lodash";
 
 const Numbers = (props) => {
-  return(
+  var numbers = _.range(1, 10);
+
+  const checkNumber = (number) => {
+
+    if (props.usedNumbers.indexOf(number) > -1 ) {
+       return "used";
+    }
+
+    if (props.selectedNumbers.indexOf(number) > -1) {
+       return "selected";
+    }
+
+    return "";
+  };
+
+  return (
     <div className="card text-center">
-        <div>
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>5</span>
-            <span>6</span>
-            <span>7</span>
-            <span>8</span>
-            <span>9</span>
-        </div>
+      <div>
+        {numbers.map((num, n) => {
+          return (
+            <span className={checkNumber(num)} key={"number_" + num} onClick={() => { props.selectNumber(num) } } >{num}</span>
+          );
+        })}
+      </div>
     </div>
   );
-}
+};
 
 export default Numbers;
