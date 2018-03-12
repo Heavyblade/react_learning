@@ -2,6 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 ReactDOM.render(
-  React.createElement("div", null, "Hello World"), // <div>Hello World</div>
-  document.getElementById("root")
+ <h1>Hello World with JSX, Babel and Webapck</h1>,
+ document.getElementById("root")
 );
