@@ -14,20 +14,19 @@ import AccountPage from './Account';
 
 import * as routes from '../constants/routes';
 
-const App = () =>
-    <Router>
-        <div>
-            <Navigation />
-            <br/>
-            <div id="wrapper">
-                <Route extact path={routes.HOME}    component={ () => <HomePage/> } />
-                <Route extact path={routes.LANDING} component={ () => <LandingPage/> } />
-                <Route extact path={routes.SIGN_UP} component={ () => <SignUpPage/> }  />
-                <Route extact path={routes.SIGN_IN} component={ () => <SignInPage/> }  />
-                <Route extact path={routes.PASSWORD_FORGET} component={ () => <PasswordForgetPage/> } />
-                <Route extact path={routes.ACCOUNT} component={ () => <AccountPage/> } />
-            </div>
-        </div>
-    </Router>
+const App = () => {
+    return <Router>
+                <div>
+                    <Navigation />
+                    <br/>
+                    <Route exact={true} path={routes.HOME}    component={ () => <HomePage/> } />
+                    <Route exact={true} path={routes.SIGN_UP} component={ () => <SignUpPage/> }  />
+                    <Route exact={true} path={routes.SIGN_IN} component={ () => <SignInPage/> }  />
+                    <Route exact={true} path={routes.PASSWORD_FORGET} component={ () => <PasswordForgetPage/> } />
+                    <Route exact={true} path={routes.ACCOUNT} component={ () => <AccountPage/> } />
+                    <Route exact={true} path={routes.LANDING} component={ () => <LandingPage/> } />
+                </div>
+           </Router>
+};
 
 export default App;
