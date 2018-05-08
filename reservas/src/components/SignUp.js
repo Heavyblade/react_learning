@@ -10,8 +10,6 @@ const SignUpPage = ({history}) =>
       <SignUpForm history={history} />
     </div>
 
-const INITIAL_STATE = {username: '', email: '', passwordOne: '', passwordTwo: '', error: null};
-
 const byPropKey = (propertyName, value) => () => ({
   [propertyName]: value,
 });
@@ -37,7 +35,7 @@ class SignUpForm extends Component {
           this.setState(byPropKey('error', error));
         });
 
-        event.preventDefault();
+      event.preventDefault();
   }
 
   render() {

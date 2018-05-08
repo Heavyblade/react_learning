@@ -5,7 +5,6 @@ import { auth } from "./firebase";
  *
  * email {string} - user's email.
  * password {string} - users' password.
- *
  */
 export const doCreateUserWithEmailAndPassword = (email, password) =>
   auth.createUserWithEmailAndPassword(email, password);
