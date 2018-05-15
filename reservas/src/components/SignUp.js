@@ -29,7 +29,7 @@ class SignUpForm extends Component {
   }
 
   onSubmit(event) {
-    const { email, passwordOne, passwordTwo } = this.state;
+    const { email, passwordOne } = this.state;
     const { history } = this.props;
 
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
@@ -52,7 +52,7 @@ class SignUpForm extends Component {
 
   render() {
     const { username, email, passwordOne, passwordTwo, error } = this.state;
-    const isInvalid = passwordOne !== passwordTwo || passwordOne === '' || email === '' ||  username === '';
+    const isInvalid = passwordOne !== passwordTwo || passwordOne === '' || email === '' || username === '';
 
     return (
       <form onSubmit={this.onSubmit}>
@@ -97,7 +97,7 @@ class SignUpForm extends Component {
             type="password"
             className="form-control"
             placeholder="Confirm Password"
-            />
+          />
         </div>
 
         <button disabled={isInvalid} type="submit" className="btn btn-primary">Sign Up</button>
@@ -105,12 +105,11 @@ class SignUpForm extends Component {
       </form>
     );
   }
-
 }
 
 const SignUpLink = () => (
   <p>
-    Don't have an account?
+    Do not have an account?
     {' '}
     <Link to={routes.SIGN_UP}>Sign Up</Link>
   </p>

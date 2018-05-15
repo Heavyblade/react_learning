@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 import { SignUpLink } from './SignUp';
 import { auth } from '../firebase';
@@ -50,6 +49,7 @@ class SignInForm extends Component {
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
+            id="email"
             value={email}
             onChange={event => this.setState(byPropKey('email', event.target.value))}
             type="text"
