@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import { SignUpLink } from './SignUp';
 import { auth } from '../firebase';
@@ -69,6 +69,7 @@ class SignInForm extends Component {
         </div>
         <button disabled={isInvalid} type="submit" className="btn btn-primary">Sign In</button>
         { error && <p>{error.message}</p> }
+        <Link to={routes.PASSWORD_FORGET}>Forgot password ?</Link>
       </form>
     );
   }

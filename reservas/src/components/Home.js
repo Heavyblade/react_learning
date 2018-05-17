@@ -1,9 +1,12 @@
 import React from 'react';
+import withAuthorization from './withAuthorization';
 
-const LandingPage = () => (
+const HomePage = () => (
   <div>
     <h1>Home page</h1>
   </div>
 );
 
-export default LandingPage;
+const condition = authUser => !!authUser;
+
+export default withAuthorization(condition)(HomePage);
