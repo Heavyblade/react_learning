@@ -3,7 +3,7 @@ const path = require('path');
 const config = {
   mode: 'development',
   entry: [
-    './index.js',
+    './src/index.js',
   ],
   module: {
     rules: [
