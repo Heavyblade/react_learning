@@ -6,6 +6,8 @@ http://0.0.0.0:80 {
 }
 
 https://0.0.0.0:443 {
+  index index.html
+  gzip
   tls self_signed
   log stdout
 }
