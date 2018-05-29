@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import * as routes from '../constants/routes';
-import SignOut from './SignOut';
-import AuthUserContext from './AuthUserContext';
+import SignOut from './authentication/SignOut';
+import AuthUserContext from './authentication/AuthUserContext';
 
 const NavigationLayout = props => (
   <nav className="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
@@ -27,27 +27,12 @@ const Loggeduser = () => (
     <ul className="navbar-nav ml-auto">
       <li className="nav-item">
         <Link className="nav-link" to={routes.HOME}>
-          <i className="material-icons">cloud_download</i> Home
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to={routes.LANDING}>
-          <i className="material-icons">cloud_download</i> Landing
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to={routes.SIGN_IN}>
-          <i className="material-icons">cloud_download</i> SignIn
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to={routes.SIGN_UP}>
-          <i className="material-icons">cloud_download</i> SignUp
+          <i className="material-icons">home</i> Inicio
         </Link>
       </li>
       <li className="nav-item">
         <Link className="nav-link" to={routes.ACCOUNT}>
-          <i className="material-icons">cloud_download</i> Account
+          <i className="material-icons">account_circle</i> Cuenta
         </Link>
       </li>
       <li className="nav-item"><SignOut /></li>
@@ -60,22 +45,17 @@ const UnloggedUser = () => (
     <ul className="navbar-nav ml-auto">
       <li className="nav-item">
         <Link className="nav-link" to={routes.HOME}>
-          <i className="material-icons">cloud_download</i> Home
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to={routes.LANDING}>
-          <i className="material-icons">cloud_download</i> Landing
+          <i className="material-icons">home</i> Inicio
         </Link>
       </li>
       <li className="nav-item">
         <Link className="nav-link" to={routes.SIGN_IN}>
-          <i className="material-icons">cloud_download</i> SignIn
+          <i className="material-icons">send</i> Login
         </Link>
       </li>
       <li className="nav-item">
         <Link className="nav-link" to={routes.SIGN_UP}>
-          <i className="material-icons">cloud_download</i> SignUp
+          <i className="material-icons">how_to_reg</i> Registro
         </Link>
       </li>
     </ul>

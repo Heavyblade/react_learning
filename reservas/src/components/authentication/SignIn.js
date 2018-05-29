@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 import { SignUpLink } from './SignUp';
-import { auth } from '../firebase';
-import * as routes from '../constants/routes';
+import { auth } from '../../firebase';
+import * as routes from '../../constants/routes';
 
 const SignInPage = ({ history }) => (
   <div>
     <h1>SignIn</h1>
+    <br />
+    <br />
     <SignInForm history={history} />
     <SignUpLink />
   </div>
@@ -47,7 +49,6 @@ class SignInForm extends Component {
     return (
       <form onSubmit={this.onSubmit}>
         <div className="form-group">
-          <label htmlFor="email">Email</label>
           <input
             id="email"
             value={email}
@@ -58,7 +59,6 @@ class SignInForm extends Component {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="password">Password</label>
           <input
             value={password}
             onChange={event => this.setState(byPropKey('password', event.target.value))}
@@ -69,6 +69,8 @@ class SignInForm extends Component {
         </div>
         <button disabled={isInvalid} type="submit" className="btn btn-primary">Sign In</button>
         { error && <p>{error.message}</p> }
+        <br />
+        <br />
         <Link to={routes.PASSWORD_FORGET}>Forgot password ?</Link>
       </form>
     );

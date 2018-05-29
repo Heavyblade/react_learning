@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-import { auth, db } from '../firebase';
-import * as routes from '../constants/routes';
+import { auth, db } from '../../firebase';
+import * as routes from '../../constants/routes';
 
 const SignUpPage = ({ history }) => (
   <div>
     <h1>Sign Up Page</h1>
+    <br />
+    <br />
     <SignUpForm history={history} />
   </div>
 );
@@ -66,7 +68,6 @@ class SignUpForm extends Component {
     return (
       <form onSubmit={this.onSubmit}>
         <div className="form-group">
-          <label htmlFor="username">Username</label>
           <input
             value={username}
             onChange={event => this.setState(byPropKey('username', event.target.value))}
@@ -77,7 +78,6 @@ class SignUpForm extends Component {
         </div>
 
         <div className="form-group">
-          <label htmlFor="email" >Email</label>
           <input
             value={email}
             onChange={event => this.setState(byPropKey('email', event.target.value))}
@@ -88,7 +88,6 @@ class SignUpForm extends Component {
         </div>
 
         <div className="form-group">
-          <label htmlFor="password">Password</label>
           <input
             value={passwordOne}
             onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
@@ -99,7 +98,6 @@ class SignUpForm extends Component {
         </div>
 
         <div className="form-group">
-          <label htmlFor="password_confirmation" >Confirm Password</label>
           <input
             value={passwordTwo}
             onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))}

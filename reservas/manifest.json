@@ -4,8 +4,8 @@
   "lang": "en-US",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#652F8E",
-  "background_color": "#652F8E",
+  "theme_color": "#2e3092",
+  "background_color": "#2e3092",
   "icons": [
     {
      "src": "/assets/img/pwa_icons/android-icon-36x36.png",
