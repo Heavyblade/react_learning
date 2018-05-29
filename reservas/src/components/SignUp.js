@@ -34,15 +34,16 @@ class SignUpForm extends Component {
 
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
       .then((authUser) => {
+        this.setState(() => ({
+          username: '',
+          email: '',
+          passwordOne: '',
+          passwordTwo: '',
+          error: null,
+        }));
+
         db.doCreateUser(authUser.uid, email, passwordOne)
           .then(() => {
-            this.setState(() => ({
-              username: '',
-              email: '',
-              passwordOne: '',
-              passwordTwo: '',
-              error: null,
-            }));
             history.push(routes.HOME);
           })
           .catch((error) => {

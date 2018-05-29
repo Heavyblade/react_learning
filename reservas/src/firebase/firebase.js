@@ -1,4 +1,5 @@
 import * as firebase from 'firebase';
+import * as firestore from 'firebase/firestore';
 
 let config;
 // Initialize Firebase
@@ -27,7 +28,8 @@ if (!firebase.apps.length) {
 }
 
 const auth = firebase.auth();
-const db = firebase.database();
+const db = firebase.firestore();
+db.settings({ timestampsInSnapshots: true });
 
 export default auth;
 
