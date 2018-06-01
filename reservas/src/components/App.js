@@ -18,22 +18,13 @@ const App = () => (
     <div>
       <Navigation />
       <div
-        className="page-header header-filter clear-filter purple-filter"
+        className="page-header header-filter clear-filter"
         data-parallax="true"
-        style={{ backgroundImage: "url('./assets/img/bg.jpg')", height: '50vh' }}
+        style={{ backgroundImage: "url('./assets/img/background.png')", height: '50vh' }}
       >
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 ml-auto mr-auto">
-              <div className="brand">
-                <h1>Zona Cardio</h1>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <div className="main main-raised">
-        <div className="section section-basic">
+        <div className="section section-basic" style={{ padding: "40px 0" }}>
           <div className="container">
             <Route path={routes.HOME} component={() => <HomePage />} />
             <Route path={routes.SIGN_UP} component={() => <SignUpPage />} />

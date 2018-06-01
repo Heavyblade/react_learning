@@ -5,3 +5,6 @@ export const doCreateUser = (userid, username, email) =>
 
 export const onceGetUsers = () =>
   db.ref('users').once('value');
+
+export const getActivities = () =>
+  db.collection('activities').get();
