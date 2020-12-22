@@ -28,6 +28,7 @@ class App extends Component {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <p>La version de React es {React.version}</p>
         <button onClick={this.switchNameHandler}>Presioname</button>
         <Persona name={this.state.persons[0].name} onChangeHandler={this.switchNameHandler} edad={this.state.persons[0].edad}> Mi altura es 187 </Persona>
         <Persona name={this.state.persons[1].name} onChangeHandler={this.switchNameHandler} edad={this.state.persons[1].edad} />
